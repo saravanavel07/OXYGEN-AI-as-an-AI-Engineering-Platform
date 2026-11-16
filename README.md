@@ -1,31 +1,47 @@
 # OXYGEN AI
 
-**Intelligence in motion. Engineering without limits.**
+**Intelligence in Motion. Engineering Without Limits.**
 
-OXYGEN AI is a full-stack AI engineering and learning platform that brings model exploration, coding tools, agent workflows, data utilities, and guided learning together in one workspace. Built with React and TypeScript, it combines a focused dark interface with live particle visuals and purposeful motion to make the platform feel responsive without distracting from the work.
+OXYGEN AI is a full-stack autonomous AI engineering and learning platform built around Google Gemini Hydrogen (`gemini-4-hydrogen`). It unifies AI-assisted development, guided learning, production-ready tooling, and a live, motion-driven interface into a single intelligent workspace.
 
-## Experience
+At the center of the experience is a real-time particle canvas and motion-led interface system that brings the platform to life. Cursor interaction, ambient wave pulses, dynamic particle connections, and animated transitions create a professional, modern operating environment without sacrificing clarity or usability.
 
-- **Live particle canvas:** A continuously rendered Canvas 2D background with drifting particles, fine connecting lines, and subtle crimson energy waves. Particles respond to pointer movement, and clicks create expanding wave pulses.
-- **Motion-aware interactions:** View changes use concise transitions powered by Motion. The particle effect supports configurable density and respects the operating system's reduced-motion preference, as well as the app's reduced-motion setting.
-- **Neural orbit visualization:** A canvas-based model visualization displays orbital rings and moving particles alongside runtime status.
-- **Responsive workspace:** Desktop navigation and a mobile drawer provide access to the platform's modules, including the Command Center, Hydrogen Masterclass, Model Playground, AI Coding Studio, Agent Control Center, Data Intelligence Lab, Geospatial Explorer, API Laboratory, Benchmark Center, Project Workshop, Documentation, and Settings.
-- **Practical engineering tools:** The platform includes AI-powered workflows, learning progress, activity history, persistent workspace data, and isolated Python and in-memory SQL execution.
+## Live motion and particle experience
 
-## Technology
+OXYGEN AI includes a live animated particle background that continuously renders on a canvas layer across the interface. The engine:
 
-- **Frontend:** React 19, TypeScript, Tailwind CSS v4, Motion, Highlight.js, Marked, and a Canvas 2D particle engine.
-- **Server:** Express on port `3000`, with Vite middleware in development and static `dist` serving in production.
-- **AI integration:** Server-side `@google/genai` integration, configured with `GEMINI_API_KEY`.
-- **Persistence:** SQLite through Node.js's built-in `node:sqlite` module.
-- **Execution sandbox:** Isolated `python3 -I` subprocesses with AST safety checks, CPU and memory limits, and a five-second timeout; SQL runs against an in-memory SQLite database.
+- animates floating particles with subtle motion and interconnection lines
+- creates crimson energy waves that pulse through the canvas
+- reacts to mouse movement for a responsive, fluid feel
+- supports configurable particle density and accessibility-aware reduced-motion behavior
+- visually reinforces the platform's AI-driven, dynamic runtime identity
+
+The interface also uses Motion-powered transitions between views to provide smooth, polished navigation and a strong product feel.
+
+## Platform capabilities
+
+- AI coding and orchestration workflows for engineering tasks
+- model experimentation and runtime orchestration with Gemini-based models
+- guided learning and structured hydrogen masterclass content
+- agent and workflow control surfaces for operational management
+- data intelligence and analytics tooling
+- geospatial exploration and API experimentation
+- benchmarking, project workspaces, and documentation tools
+
+## Architecture
+
+- **Frontend**: React 19, TypeScript, Tailwind CSS v4, Motion, Highlight.js, Marked, and a live Canvas 2D particle engine
+- **Backend (`server.ts`)**: Express server on port `3000`, with Vite middleware in development and static `dist` serving in production
+- **AI SDK (`server/gemini.ts`)**: Server-side `@google/genai` integration supporting `gemini-4-hydrogen`, `gemini-3.1-flash-lite`, `gemini-4-argon`, `gemini-4-carbon`, and `gemini-3-pro-image-preview`
+- **Persistence (`server/db.ts`)**: SQLite through Node 22 built-in `node:sqlite`
+- **Execution Sandbox (`server/sandbox.ts`)**: Isolated `python3 -I` subprocess with AST safety checks, CPU and memory caps, and a 5-second timeout, plus in-memory SQLite SQL execution
 
 ## Requirements
 
-- Node.js 22 or later
+- Node.js 22+
 - npm
-- Python 3 for the Python execution sandbox
-- A Google Gemini API key for AI-powered features
+- Python 3 for the sandboxed execution environment
+- A valid Google Gemini API key (`GEMINI_API_KEY`)
 
 ## Getting started
 
@@ -34,13 +50,13 @@ npm install
 cp .env.example .env
 ```
 
-Add your `GEMINI_API_KEY` to `.env`, then start the development server:
+Set your API key in `.env` or environment secrets, then run:
 
 ```bash
 npm run dev
 ```
 
-## Verification and production build
+## Verification and build
 
 ```bash
 npm run lint
@@ -48,7 +64,7 @@ npm run build
 node --test tests/oxygen.test.mjs
 ```
 
-To run the production server after building:
+## Production run
 
 ```bash
 npm start
@@ -56,4 +72,6 @@ npm start
 
 ## Motion and accessibility
 
-The particle canvas is decorative and hidden from assistive technology. Users can adjust particle density and enable reduced motion in Settings. The animation also checks the browser's `prefers-reduced-motion` setting. Motion is designed to support the interface—not compete with its content.
+The live motion system is designed to enhance the experience while preserving usability and accessibility. Particle density is user-configurable, and motion is automatically reduced when the system or app prefers reduced-motion settings. The animated background remains decorative and does not interfere with workflow or accessibility.
+
+OXYGEN AI is engineered to feel vivid, responsive, and intelligent—bringing real-time motion and AI tooling together in a unified engineering platform.
