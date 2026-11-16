@@ -1,0 +1,6 @@
+{
+  "name": "OXYGEN AI",
+  "description": "Autonomous AI Engineering and Learning Platform centered on Google Gemini Hydrogen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

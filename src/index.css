@@ -1,0 +1,162 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #080808;
+    --bg-secondary: #101010;
+    --bg-card: #171717;
+    --accent-crimson: #E32636;
+    --accent-deep-red: #8F101D;
+    --silver: #B8B8B8;
+    --text-primary: #F5F5F5;
+    --text-secondary: #969696;
+  }
+
+  html {
+    background-color: #080808;
+    color: #F5F5F5;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    color-scheme: dark;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: "Outfit", "Plus Jakarta Sans", sans-serif;
+    text-wrap: balance;
+  }
+
+  code, pre, .font-mono, .tabular-nums {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar for dark precision aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Highlight.js Obsidian Crimson theme */
+.hljs {
+  background: transparent !important;
+  color: #F5F5F5 !important;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-name {
+  color: #E32636;
+}
+.hljs-string,
+.hljs-attr,
+.hljs-symbol,
+.hljs-bullet {
+  color: #B8B8B8;
+}
+.hljs-title,
+.hljs-section,
+.hljs-function {
+  color: #F5F5F5;
+  font-weight: 600;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-type {
+  color: #F87171;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #737373;
+  font-style: italic;
+}
+
+/* Markdown prose styles inside Oxygen AI */
+.oxygen-prose h1,
+.oxygen-prose h2,
+.oxygen-prose h3 {
+  font-family: "Outfit", sans-serif;
+  color: #F5F5F5;
+  font-weight: 600;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+.oxygen-prose h1 { font-size: 1.35rem; }
+.oxygen-prose h2 { font-size: 1.15rem; }
+.oxygen-prose h3 { font-size: 1rem; }
+.oxygen-prose p {
+  color: #E5E5E5;
+  line-height: 1.65;
+  margin-bottom: 0.75em;
+}
+.oxygen-prose ul,
+.oxygen-prose ol {
+  margin: 0.5em 0 0.9em 1.25em;
+  color: #D4D4D4;
+}
+.oxygen-prose li {
+  margin-bottom: 0.35em;
+  line-height: 1.6;
+}
+.oxygen-prose ul li { list-style-type: disc; }
+.oxygen-prose ol li { list-style-type: decimal; }
+.oxygen-prose code:not(pre code) {
+  background: #1E1E1E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #F5F5F5;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.85em;
+}
+.oxygen-prose pre {
+  background: #0C0C0C;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  overflow-x: auto;
+  margin: 0.75em 0;
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+.oxygen-prose blockquote {
+  border: 1px solid rgba(227, 38, 54, 0.25);
+  background: rgba(227, 38, 54, 0.05);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: #B8B8B8;
+  margin: 0.75em 0;
+}
+.oxygen-prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75em 0;
+  font-size: 0.875rem;
+}
+.oxygen-prose th,
+.oxygen-prose td {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.oxygen-prose th {
+  background: #141414;
+  color: #F5F5F5;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
